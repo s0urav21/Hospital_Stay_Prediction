@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import warnings
 warnings.filterwarnings("ignore")
 import numpy as np
@@ -104,7 +104,7 @@ print("===================== Model AUC Curve ===========================")
 fpr, tpr, threshold = roc_curve(y_test, y_test_pred_prob)
 fpr1, tpr1, threshold1 = roc_curve(y_train, y_train_pred_prob)
 
-plt.figure(figsize=(10,5))
+'''plt.figure(figsize=(10,5))
 plt.title('CatBoost ROC Curve')
 plt.plot([0,1], [0,1], 'k--')
 plt.plot(fpr1, tpr1, label='CatBoost - Train')
@@ -117,7 +117,7 @@ plt.plot(fpr, tpr, label='CatBoost - Test')
 plt.xlabel('FPR')
 plt.ylabel('TPR')
 plt.legend(bbox_to_anchor=(1, 1), bbox_transform=plt.gcf().transFigure)
-plt.show()
+plt.show())'''
 
 # Save the best combination of parameters as best model
 import pickle
