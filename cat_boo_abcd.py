@@ -71,12 +71,12 @@ def main():
     '''
     
     less_html='''
-    <div style = "background-color:#F08080; padding:10px">
+    <div style = "background-color:#00FF00; padding:10px">
     <h2 style = "color:black;text-align:center;"> You have to stay less than 10 days </h2>
     </div>
     '''
     
-    if st.button("Check"):
+    if st.button("Submit"):
         output = catb1(Hospital_code, Hospital_type_code, City_Code_Hospital, Hospital_region_code , Available_Extra_Rooms_in_Hospital, Department, Ward_Type, Ward_Facility_Code, Bed_Grade, City_Code_Patient, Type_of_Admission,Severity_of_Illness, Visitors_with_Patient, Age, Admission_Deposit)
         if(output==0):
             st.markdown(more_html, unsafe_allow_html=True)
